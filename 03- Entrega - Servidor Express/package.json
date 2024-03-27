@@ -1,0 +1,16 @@
+{
+  "name": "03--entrega---servidor-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ProductManager.js",
+  "scripts": {
+    "start":"node app.js",
+    "start:dev": "node --watch app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
