@@ -1,16 +1,19 @@
 {
-  "name": "03--entrega---servidor-express",
+  "name": "01--pre-entrega",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start":"node app.js",
+    "start": "node app.js",
     "start:dev": "node --watch app.js"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.2",
+    "socket.io": "^4.7.5"
   }
 }

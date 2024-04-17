@@ -1,0 +1,57 @@
+[
+	{
+		"id": 1,
+		"title": "producto 1",
+		"description": "Descripcion producto 1",
+		"price": 10,
+		"thumbnail": "Sin imagen",
+		"code": "abc123-151",
+		"stock": 25,
+		"status": true,
+		"category": "Categoria 1"
+	},
+	{
+		"id": 2,
+		"title": "producto 2",
+		"description": "Descripcion Prod 2",
+		"price": 200,
+		"thumbnail": "Sin imagen",
+		"code": "abc123-2",
+		"stock": 25,
+		"status": true,
+		"category": "Categoria 1"
+	},
+	{
+		"id": 3,
+		"title": "producto 3",
+		"description": "Descripcion Prod 3",
+		"price": 200,
+		"thumbnail": "Sin imagen",
+		"code": "abc123-3",
+		"stock": 25,
+		"status": true,
+		"category": "Categoria 2"
+	},
+	{
+		"id": 5,
+		"title": "producto 5",
+		"description": "Descripcion Prod 5",
+		"price": 200,
+		"thumbnail": "Sin imagen",
+		"code": "abc123-5",
+		"stock": 25,
+		"status": true,
+		"category": "Categoria 1"
+	},
+	{
+		"id": 6,
+		"title": "producto 6",
+		"description": "Descripcion Prod 6",
+		"price": 200,
+		"thumbnail": "Sin imagen",
+		"code": "abc123-6",
+		"stock": 25,
+		"status": true,
+		"category": "Categoria 2"
+	}
+]

@@ -1,0 +1,26 @@
+<main>
+    <div >
+        <h2>Lista de Productos</h2>
+        {{#each productos}}
+        <div class="container h-100">
+         <div class="row h-100">
+            <div class="col-md-4 my-auto">
+                <div class="card card-body rounded-0">
+                    <h5 class="card-header">{{this.title}}</h5>
+                    <p class="card-text">Descripcion: {{this.description}}</p>
+                    <p class="card-text">Precio: {{this.price}}</p>
+                    <p class="card-text">Code: {{this.code}}</p>
+                    <p class="card-text">Stock: {{this.stock}}</p>
+                    <p class="card-text">Categoria: {{this.category}}</p>
+                    </div>
+                </div>
+            </div>
+           </div> 
+           </div>
+        {{/each}}
+    </div>
+</main>
+
+
+
+{{!-- <script src="/js/home.js"></script> --}}

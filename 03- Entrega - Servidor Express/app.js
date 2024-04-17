@@ -1,23 +1,35 @@
 const express = require('express')
+//import express from 'express'
 
 const ProductManager = require('./ProductManager.js')
 
 const app = express()
+// para poder leer los json
+app.use(express.json())
+app.use(express.urlencoded({extended: true}))
+
 const productManager= new ProductManager("./productos.json");
 
 app.get('/getProducts', async  (req, res)=>{
+    try
+    {
     const { limit } = req.query
   
     const productos= await (productManager.getProducts());
      if (!limit)
      {
-        res.send(productos)
+       // res.status(200).send({ status: 'success', payload: productos })
+        res.send({status: 'success', payload: productos})
      }
      else
      {
         const productosLimit = productos.slice(0, parseInt(limit));
-        res.send(productosLimit)
+        res.status(200).send({ status: 'success', payload: productosLimit })
      }
+    }
+    catch (error){
+
+    }
    
 })
 
