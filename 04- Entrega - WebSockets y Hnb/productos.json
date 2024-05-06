@@ -53,5 +53,16 @@
 		"stock": 25,
 		"status": true,
 		"category": "Categoria 2"
+	},
+	{
+		"id": 7,
+		"title": "Test",
+		"description": "Eva",
+		"price": "300",
+		"thumbnail": "Sin imagen",
+		"code": "2322",
+		"stock": 25,
+		"status": 0,
+		"category": "Categoria 2"
 	}
 ]
