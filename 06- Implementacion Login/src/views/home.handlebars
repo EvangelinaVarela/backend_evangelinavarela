@@ -1,0 +1,55 @@
+<main>
+    <div class="container">
+        <div style="position: relative; height: 50px; ">
+            {{#if role}}
+                <a href="/realtimeproducts" style="position: absolute;" class="btn btn-outline-dark">
+                    Admin. Productos
+                </a>
+            {{/if}}
+            
+
+           <a href="/sessions/logout" style="position: absolute;  right: 0;" class="btn btn-outline-dark">
+              Logout
+            </a>
+        </div>
+        
+        <h2>Lista de Productos - Bienvenid@ {{nombre}}</h2>
+        {{#each productos}}
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="col-md-4 my-auto ">
+                        <div class="card bg-light mb-3">
+                            <h5 class="card-header">{{this.title}}</h5>
+                             <div class="card-body">
+                                <p class="card-text">Descripcion: {{this.description}}</p>
+                                <p class="card-text">Precio: {{this.price}}</p>
+                                <p class="card-text">Categoria: {{this.category}}</p> 
+                             </div>
+                            
+                            {{!-- <form action="/products" method="post">
+                                <input id="txtCantidad" type="text" name="txtCantidad" placeholder="Ingrese Cantidad" class="form-control rounded-0 mb-3" />
+                                <input id="carId" type="text"  name="carId" placeholder="Ingrese el Id de Carrito" class="form-control rounded-0 mb-3" />
+                                <input type="text" name="prodId" value="{{this._id}}" style="display: none;">
+                                <button>Agregar al carrito</button>
+                            </form>  --}}
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        {{/each}}
+
+        <center >
+            {{#if hasPrevPage}}
+                <a href="/products?nropage={{prevPage}}">Anterior</a>
+            {{/if}}
+            <label>{{page}}</label>
+            {{#if hasNextPage}}
+                <a href="/products?nropage={{nextPage}}">Siguente</a>
+            {{/if}}
+        </center>
+    </div>
+</main>
+
+
+
+{{!-- <script src="/js/home.js"></script> --}}
