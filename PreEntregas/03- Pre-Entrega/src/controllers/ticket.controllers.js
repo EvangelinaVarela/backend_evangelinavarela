@@ -1,0 +1,65 @@
+import { productService, cartService, ticketService , userService} from '../service/index.js'
+import { v4 as uuidv4 } from 'uuid';
+
+class TicketController
+{
+    constructor(){
+    }
+
+
+    purchase = async (req, res)=>{
+        const {cid} = req.params;
+        const carrito= await (cartService.getCart(cid));
+        if (!carrito)
+        {
+            return res.status(404).send(`No existe el carrito con ID ${cid} `);
+        }
+         // Array de IDs de productos que no se pudieron comprar
+        const productsNotPurchased = [];
+        let total= 0
+        for (const item of carrito.products) {
+            const product =item.product;
+            const quantity= item.quantity;
+            const productStock= await productService.getProduct(product._id)
+            if (productStock.stock< quantity)
+            {
+                productsNotPurchased.push(product._id);
+            } else
+            {
+                total = total + (quantity*productStock.price)
+                productStock.stock=  productStock.stock - quantity
+                await productService.updateProduct(product._id,productStock)
+            }
+        }
+        const productosOK= carrito.products.filter(item=> !productsNotPurchased.includes(item.product._id))
+        //Crear el ticket de compra
+        const email= req.user.user.email
+        const usuario = await userService.getUser({email}) 
+        const uuid = uuidv4();
+        const newTicket={
+            code:uuid,
+            amount:total,
+            user: usuario,
+            products: productosOK
+        }
+       const result = await ticketService.createTicket(newTicket)
+                
+        // Si hay productos no comprados, actualizamos el carrito para quitarlos
+        if (productsNotPurchased.length > 0) {
+            const productosEliminar= carrito.products.filter(item=> productsNotPurchased.includes(item.product._id))
+            await cartService.updateProduct(cid, productosEliminar);
+        } else {
+             //Vacio el carrito si se compraron todos los productos
+            await cartService.deleteCart(cid);
+        }
+
+        return res.status(200).json({
+            status: 'success',
+            message: `La compra se realizo correctamente Code:${result.code} y quedaron ${productsNotPurchased.length} producto sin poder comprar por falta de stock` ,
+            productsNotPurchased,
+            result
+        });
+    }
+}
+
+export default TicketController
