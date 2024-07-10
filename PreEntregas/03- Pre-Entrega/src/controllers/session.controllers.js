@@ -59,14 +59,14 @@ class UserCotroller
         try
             {
             const {firts_name, last_name, email, password, age} = req.body
-            console.log ('Register', firts_name, last_name, email, password, age)
+           
             if (!email || !password || !firts_name || !last_name) return res.status(401).send({status: 'error', error: 'Faltan ingresar datos'})
             
             const UserExist = await  userService.getUser({email})
             if (UserExist) return res.status(401).send({status: 'error', error: 'El usuario ya existe'})
             
             let newCarts= await cartService.createCart()
-            
+
             const newUser={
                 firts_name,
                 last_name,
@@ -77,18 +77,20 @@ class UserCotroller
                 cart: newCarts
             }
            const result = await userService.createUser(newUser)
-      
-           const token= generateToken({
+           const userExist = await userService.getUser({email})
+           const { role, cart } = userExist
+           const token = generateToken({user:{
             email,
             firts_name,
             last_name, 
-            role:result.role,
-            id:result._id,
-            cart: newCarts
-           })
+            role,
+            cart
+        }, expiresIn: '24h'})
+        req.user= userExist
         
            if (result)
            {
+            req.user= result
              return res.cookie('token', token,{
                 maxAge: 60*60*1000*24,
                 httpOnly:true

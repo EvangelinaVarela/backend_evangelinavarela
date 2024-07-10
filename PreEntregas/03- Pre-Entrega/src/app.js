@@ -41,19 +41,19 @@ app.set('views', __dirname+'/views')
 app.set('view engine', 'handlebars')
 
 // sessions con mongo - db
-app.use(session({
-    store: MongoStore.create({
-        mongoUrl: configObject.MONGO_URL,//'mongodb+srv://evangelinavarela:evangelina1234@cluster0.l5uohuv.
-        mongoOptions: {
-            useNewUrlParser: true,
-            useUnifiedTopology: true
-        },
-        ttl: 60 * 60 * 1000 * 24
-    }),
-    secret: 's3cr3etC@d3r',
-    resave: true,
-    saveUninitialized: true
-}))
+// app.use(session({
+//     store: MongoStore.create({
+//         mongoUrl: configObject.MONGO_URL,
+//         mongoOptions: {
+//             useNewUrlParser: true,
+//             useUnifiedTopology: true
+//         },
+//         ttl: 60 * 60 * 1000 * 24
+//     }),
+//     secret: 's3cr3etC@d3r',
+//     resave: true,
+//     saveUninitialized: true
+// }))
 
 initializePassport() 
 app.use(passport.initialize())

@@ -22,10 +22,10 @@ router.get('/products',passportCall('jwt'), async (req, res)=>{
     const  { docs, page, hasPrevPage, hasNextPage, prevPage, nextPage } = await (productManager.getProducts(limit,nropage, sort));
        
     const usuario = req.user.user
-    const nombre= usuario.firts_name  
+    
+    const nombre= usuario.first_name 
   
     let esAdmin
-
     if (usuario.role== 'admin') {
         esAdmin=true
     }
