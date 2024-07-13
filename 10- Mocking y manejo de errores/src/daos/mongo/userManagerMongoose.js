@@ -1,0 +1,40 @@
+import usersModel from '../models/users.model.js';
+import userDTO from '../../dto/user.dto.js'
+
+export class UserManagerMongoose {
+   
+  constructor()
+  {        
+  }
+
+  
+    async createUser(user) {
+        const result = await usersModel.create(user)
+        return result;    
+
+    }
+  
+    async getUser(filter) {
+      try {
+        return await usersModel.findOne(filter)
+       } catch (error) {
+           console.log(error.message)
+       }
+    }
+
+    async getUserDTO(filter) {
+      try {
+        const result=  await usersModel.findOne(filter)
+        const usuario = new userDTO(result);
+        return usuario
+       } catch (error) {
+           console.log(error.message)
+       }
+    }
+   
+    async getUsers() {
+      return this.users;
+    }
+  }
+
+  export default UserManagerMongoose;

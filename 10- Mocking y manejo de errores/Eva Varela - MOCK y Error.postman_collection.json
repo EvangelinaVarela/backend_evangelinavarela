@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "10d7b779-a111-4eb5-adcd-860592bdac10",
+		"name": "Eva Varela - MOCK y Error",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8636192"
+	},
+	"item": [
+		{
+			"name": "Agregar Producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"title\": \"Producto eva\",\r\n      \"description\": \"Descripcion producto eva\",\r\n      \"price\": 12,\r\n      \"thumbnail\": \"Sin imagen\",\r\n      \"code\": \"abc123-151\",\r\n      \"stock\": 45,\r\n      \"status\": true,\r\n      \"category\": \"Categoria 3\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mockingproducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/mockingproducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mockingproducts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
