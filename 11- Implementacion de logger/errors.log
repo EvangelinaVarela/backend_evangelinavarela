@@ -1,0 +1,6 @@
+info: Base de datos conectada
+info: Escuchando en el puerto 8080
+info: GET en /loggerTest - 7/18/2024, 3:16:44 PM
+fatal: Log Fatal!!
+warning: Log Alerta!!
+error: Log Error!!
