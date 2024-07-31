@@ -1,0 +1,196 @@
+info: Base de datos conectada
+info: Escuchando en el puerto 8080
+info: GET en /loggerTest - 7/18/2024, 3:16:44 PM
+fatal: Log Fatal!!
+warning: Log Alerta!!
+error: Log Error!!
+info: Base de datos conectada
+info: Escuchando en el puerto 8080
+info: POST en /api/sessions/forgotPassword - 7/26/2024, 11:39:43 AM
+error: undefined {"code":"EAUTH","command":"API"}
+info: POST en /api/sessions/forgotPassword - 7/26/2024, 11:40:40 AM
+error: undefined {"code":"EAUTH","command":"API"}
+info: POST en /api/sessions/forgotPassword - 7/26/2024, 11:55:02 AM
+error: undefined {"code":"EAUTH","command":"API"}
+info: Base de datos conectada
+info: Escuchando en el puerto 8080
+info: POST en /api/sessions/forgotPassword - 7/26/2024, 3:31:25 PM
+info: GET en /%20/resetpass/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpc3QiOnsiX2lkIjoiNjZhMzlkMDhhZTBkODQ2ZmVmYmY3ODVjIiwiZmlydHNfbmFtZSI6IkV2YW5nZWxpbmEiLCJsYXN0X25hbWUiOiJWYXJlbGEiLCJhZ2UiOjQ0LCJlbWFpbCI6ImV2YW5nZWxpbmEudmFyZWxhQGJpeml0Z2xvYmFsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJGJtLllIWThCWU9yaVJFNlAwTGU1Y3ViTktkSUwvQjhReUVNcGIvTE1aNnRxZVUuUm9WNExhIiwicm9sZSI6InVzZXIiLCJjYXJ0IjoiNjZhMzlkMDhhZTBkODQ2ZmVmYmY3ODVhIiwiX192IjowfSwiZXhwaXJlc0luIjoiMWgiLCJpYXQiOjE3MjIwMTg2ODUsImV4cCI6MTcyMjEwNTA4NX0.fXnB7f3UH_oAEj7j1pgKtF-ItZGUvSP5W5YvN38Imkc - 7/26/2024, 3:31:39 PM
+info: GET en /resetpass/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpc3QiOnsiX2lkIjoiNjZhMzlkMDhhZTBkODQ2ZmVmYmY3ODVjIiwiZmlydHNfbmFtZSI6IkV2YW5nZWxpbmEiLCJsYXN0X25hbWUiOiJWYXJlbGEiLCJhZ2UiOjQ0LCJlbWFpbCI6ImV2YW5nZWxpbmEudmFyZWxhQGJpeml0Z2xvYmFsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJGJtLllIWThCWU9yaVJFNlAwTGU1Y3ViTktkSUwvQjhReUVNcGIvTE1aNnRxZVUuUm9WNExhIiwicm9sZSI6InVzZXIiLCJjYXJ0IjoiNjZhMzlkMDhhZTBkODQ2ZmVmYmY3ODVhIiwiX192IjowfSwiZXhwaXJlc0luIjoiMWgiLCJpYXQiOjE3MjIwMTg2ODUsImV4cCI6MTcyMjEwNTA4NX0.fXnB7f3UH_oAEj7j1pgKtF-ItZGUvSP5W5YvN38Imkc - 7/26/2024, 3:31:53 PM
+info: GET en /resetpass/ - 7/26/2024, 3:32:01 PM
+info: GET en /css/ - 7/26/2024, 3:32:01 PM
+info: Base de datos conectada
+info: Escuchando en el puerto 8080
+info: Base de datos conectada
+info: Escuchando en el puerto 8080
+info: POST en /api/sessions/resetPassword - 7/29/2024, 9:52:14 AM
+info: Decoder user {"__v":0,"_id":"66a39d08ae0d846fefbf785c","age":44,"cart":"66a39d08ae0d846fefbf785a","email":"evangelina.varela@bizitglobal.com","firts_name":"Evangelina","last_name":"Varela","password":"$2b$10$bm.YHY8BYOriRE6P0Le5cubNKdIL/B8QyEMpb/LMZ6tqeU.RoV4La","role":"user"}
+info: User DB {"$__":{"activePaths":{"paths":{"__v":"init","_id":"init","age":"init","cart":"init","email":"init","firts_name":"init","last_name":"init","password":"init","role":"init"},"states":{"default":{},"init":{"__v":true,"_id":true,"age":true,"cart":true,"email":true,"firts_name":true,"last_name":true,"password":true,"role":true},"require":{}}},"skipId":true},"$isNew":false,"_doc":{"__v":0,"_id":"66a39d08ae0d846fefbf785c","age":44,"cart":"66a39d08ae0d846fefbf785a","email":"evangelina.varela@bizitglobal.com","firts_name":"Evangelina","last_name":"Varela","password":"$2b$10$bm.YHY8BYOriRE6P0Le5cubNKdIL/B8QyEMpb/LMZ6tqeU.RoV4La","role":"user"}}
+info: GET en / - 7/29/2024, 9:52:27 AM
+info: GET en /css/ - 7/29/2024, 9:52:27 AM
+info: POST en /api/sessions/login - 7/29/2024, 9:52:36 AM
+info: GET en /products - 7/29/2024, 9:52:36 AM
+info: GET en /css/ - 7/29/2024, 9:52:36 AM
+info: Base de datos conectada
+info: Escuchando en el puerto 8080
+info: POST en /api/sessions/resetPassword - 7/29/2024, 12:04:29 PM
+info: POST en /api/sessions/login - 7/29/2024, 12:04:48 PM
+info: POST en /api/sessions/login - 7/29/2024, 12:04:52 PM
+info: GET en /products - 7/29/2024, 12:04:52 PM
+info: GET en /css/ - 7/29/2024, 12:04:52 PM
+info: POST en /api/sessions/resetPassword - 7/29/2024, 12:05:08 PM
+info: Base de datos conectada
+info: Escuchando en el puerto 8080
+info: Base de datos conectada
+info: Escuchando en el puerto 8080
+info: POST en /api/sessions/login - 7/29/2024, 3:01:07 PM
+info: GET en /products - 7/29/2024, 3:01:07 PM
+info: GET en /css/ - 7/29/2024, 3:01:07 PM
+info: GET en /api/sessions/logout - 7/29/2024, 3:01:22 PM
+info: GET en / - 7/29/2024, 3:01:22 PM
+info: GET en /css/ - 7/29/2024, 3:01:22 PM
+info: POST en /api/sessions/login - 7/29/2024, 3:01:38 PM
+info: GET en /products - 7/29/2024, 3:01:39 PM
+info: GET en /css/ - 7/29/2024, 3:01:39 PM
+info: GET en /realtimeproducts - 7/29/2024, 3:01:42 PM
+info: GET en /css/ - 7/29/2024, 3:01:42 PM
+info: GET en /api/sessions/logout - 7/29/2024, 3:01:58 PM
+info: GET en / - 7/29/2024, 3:01:58 PM
+info: GET en /css/ - 7/29/2024, 3:01:58 PM
+info: POST en /api/users/changeUserRole - 7/29/2024, 3:24:24 PM
+info: POST en /api/users/premium - 7/29/2024, 3:24:57 PM
+info: POST en /api/users/premium/:1 - 7/29/2024, 3:25:17 PM
+info: POST en /api/premium/:1 - 7/29/2024, 3:25:55 PM
+info: POST en /api/users/premium/:1 - 7/29/2024, 3:26:45 PM
+info: POST en /api/users/premium/1 - 7/29/2024, 3:26:55 PM
+info: POST en /api/session/premium/1 - 7/29/2024, 3:27:21 PM
+info: POST en /api/session/premium/1 - 7/29/2024, 3:28:39 PM
+info: POST en /api/sessions/premium/1 - 7/29/2024, 3:29:08 PM
+info: POST en /api/sessions - 7/29/2024, 3:30:02 PM
+info: POST en /api/users/premium/1 - 7/29/2024, 3:31:10 PM
+info: POST en /api/users/premium/1 - 7/29/2024, 3:31:26 PM
+info: GET en /api/users/premium/1 - 7/29/2024, 3:31:32 PM
+info: GET en /api/users/premium/1 - 7/29/2024, 3:32:59 PM
+info: GET en /api/sessions/faillogin - 7/29/2024, 3:33:57 PM
+info: GET en /api/sessions/premium - 7/29/2024, 3:34:39 PM
+info: GET en /api/sessions/premium - 7/29/2024, 3:35:37 PM
+info: GET en /api/sessions/faillogin - 7/29/2024, 3:35:49 PM
+info: GET en /api/sessions/faillogin - 7/29/2024, 3:35:59 PM
+info: GET en /api/sessions/premium - 7/29/2024, 3:36:06 PM
+info: Base de datos conectada
+info: Escuchando en el puerto 8080
+info: GET en /api/users/faillogin - 7/29/2024, 3:37:07 PM
+info: GET en /api/users/premium - 7/29/2024, 3:37:23 PM
+info: GET en /api/users/faillogin - 7/29/2024, 3:38:07 PM
+info: GET en /api/users/faillogin - 7/29/2024, 3:38:42 PM
+info: Base de datos conectada
+info: Escuchando en el puerto 8080
+info: POST en /api/users/premium/66a39d08ae0d846fefbf785c - 7/29/2024, 4:05:17 PM
+info: Base de datos conectada
+info: Escuchando en el puerto 8080
+info: GET en / - 7/30/2024, 11:45:59 AM
+info: GET en /css/ - 7/30/2024, 11:45:59 AM
+info: POST en /api/sessions/login - 7/30/2024, 11:46:12 AM
+info: GET en /products - 7/30/2024, 11:46:12 AM
+info: GET en /css/ - 7/30/2024, 11:46:12 AM
+info: GET en /realtimeproducts - 7/30/2024, 11:46:13 AM
+info: GET en /css/ - 7/30/2024, 11:46:13 AM
+info: DELETE en /api/products/[object%20HTMLInputElement] - 7/30/2024, 11:46:16 AM
+info: GET en /realtimeproducts?id=6679c7915966f548cba5e754+ - 7/30/2024, 11:46:17 AM
+info: GET en /css/ - 7/30/2024, 11:46:17 AM
+info: GET en /css/ - 7/30/2024, 11:46:23 AM
+info: DELETE en /api/products/[object%20HTMLInputElement] - 7/30/2024, 11:46:43 AM
+info: GET en /realtimeproducts?id=6679c7915966f548cba5e754 - 7/30/2024, 11:46:43 AM
+info: GET en /css/ - 7/30/2024, 11:46:43 AM
+info: DELETE en /api/products/[object%20HTMLInputElement] - 7/30/2024, 11:47:25 AM
+info: GET en /realtimeproducts?id=6679c7915966f548cba5e754 - 7/30/2024, 11:47:25 AM
+info: GET en /css/ - 7/30/2024, 11:47:25 AM
+info: Base de datos conectada
+info: Escuchando en el puerto 8080
+info: GET en /realtimeproducts?id=663e2b5195e9f588305b7bb1 - 7/30/2024, 2:27:34 PM
+info: DELETE en /api/products/663e2b5195e9f588305b7bbb - 7/30/2024, 2:27:40 PM
+info: GET en /realtimeproducts?id=663e2b5195e9f588305b7bbb - 7/30/2024, 2:27:40 PM
+info: DELETE en /api/products/663e2b5195e9f588305b7bbb - 7/30/2024, 2:27:55 PM
+info: GET en /realtimeproducts?id=663e2b5195e9f588305b7bbb - 7/30/2024, 2:27:55 PM
+info: DELETE en /api/products/663e2b5195e9f588305b7bbb - 7/30/2024, 2:28:21 PM
+info: GET en /realtimeproducts?id=663e2b5195e9f588305b7bbb - 7/30/2024, 2:28:21 PM
+info: POST en /api/products - 7/30/2024, 2:30:11 PM
+error: undefined {"cause":"Hay una de las propiedades del productos incompleta o no valido.\n    listado de propiedades requeridos: \n    * Title: necesita ser un string, pero se recibio qqqqq\n    * Description: necesita ser un string, pero se recibio qqq\n    * price: necesita ser un numero, pero se recibio \n    * code: necesita ser un string, pero se recibio \n    * category: necesita ser un string, pero se recibio \n    * stock: necesita ser un numero, pero se recibio \n   ","code":2,"name":"Producto creacion error"}
+info: POST en /api/products - 7/30/2024, 2:30:19 PM
+info: Base de datos conectada
+info: Escuchando en el puerto 8080
+info: GET en /realtimeproducts?id=663e2b5195e9f588305b7bbb - 7/30/2024, 3:29:51 PM
+info: GET en /realtimeproducts?id=66a9232b920713489d74a72d1 - 7/30/2024, 3:30:22 PM
+info: GET en /realtimeproducts?id=66a9232b920713489d74a72d - 7/30/2024, 3:30:56 PM
+info: Base de datos conectada
+info: Escuchando en el puerto 8080
+info: DELETE en /api/products/6685eb91d62bcf57df6875e1 - 7/30/2024, 4:33:27 PM
+info: DELETE en /api/products/6685eb91d62bcf57df6875e - 7/30/2024, 4:33:36 PM
+info: Base de datos conectada
+info: Escuchando en el puerto 8080
+info: GET en / - 7/30/2024, 5:34:35 PM
+info: POST en /api/sessions/login - 7/30/2024, 5:34:55 PM
+info: GET en /products - 7/30/2024, 5:34:55 PM
+info: GET en /realtimeproducts - 7/30/2024, 5:34:58 PM
+info: GET en /realtimeproducts?id=6650e73ee3812c4668d60d53 - 7/30/2024, 5:35:15 PM
+info: GET en /realtimeproducts?id=6650e73ee3812c4668d60d53 - 7/30/2024, 5:35:35 PM
+info: GET en //api/sessions/login - 7/30/2024, 5:39:51 PM
+info: GET en /api/sessions/login - 7/30/2024, 5:40:01 PM
+info: GET en /api/sessions/login - 7/30/2024, 5:40:37 PM
+info: GET en /products - 7/30/2024, 5:55:14 PM
+info: GET en /realtimeproducts - 7/30/2024, 5:55:42 PM
+info: GET en /carts/668f0c549409128f33538bea - 7/30/2024, 5:59:48 PM
+info: GET en /products - 7/30/2024, 5:59:49 PM
+info: POST en /products - 7/30/2024, 5:59:52 PM
+info: POST en /products - 7/30/2024, 5:59:58 PM
+info: GET en /api/sessions/logout - 7/30/2024, 6:00:01 PM
+info: GET en / - 7/30/2024, 6:00:01 PM
+info: POST en /api/sessions/login - 7/30/2024, 6:00:52 PM
+info: GET en /products - 7/30/2024, 6:00:52 PM
+info: GET en /carts/668f0c549409128f33538bea - 7/30/2024, 6:00:53 PM
+info: GET en /products - 7/30/2024, 6:00:54 PM
+info: POST en /products - 7/30/2024, 6:00:56 PM
+info: GET en /carts/668f0c549409128f33538bea - 7/30/2024, 6:00:56 PM
+info: GET en /products - 7/30/2024, 6:01:00 PM
+info: GET en /api/sessions/logout - 7/30/2024, 6:03:03 PM
+info: GET en / - 7/30/2024, 6:03:03 PM
+info: POST en /api/sessions/login - 7/30/2024, 6:03:12 PM
+info: GET en /products - 7/30/2024, 6:03:12 PM
+info: GET en /realtimeproducts - 7/30/2024, 6:03:14 PM
+info: GET en /realtimeproducts?id=663e2b4495e9f588305b7bb7 - 7/30/2024, 6:04:32 PM
+info: GET en /realtimeproducts?id=663e2b4495e9f588305b7bb7 - 7/30/2024, 6:07:47 PM
+info: GET en /realtimeproducts?id=663e2b4495e9f588305b7bb7 - 7/30/2024, 6:07:58 PM
+info: GET en /adminproducts - 7/30/2024, 6:11:56 PM
+info: GET en /adminproducts - 7/30/2024, 6:12:03 PM
+info: GET en /adminproducts - 7/30/2024, 6:12:58 PM
+info: GET en /adminproducts - 7/30/2024, 6:13:29 PM
+info: GET en /adminproducts - 7/30/2024, 6:14:05 PM
+info: Base de datos conectada
+info: Escuchando en el puerto 8080
+info: GET en /adminproducts - 7/30/2024, 6:14:37 PM
+info: Base de datos conectada
+info: Escuchando en el puerto 8080
+info: GET en /adminproducts - 7/30/2024, 6:35:39 PM
+info: DELETE en /api/products/663e2b4c95e9f588305b7bb9 - 7/30/2024, 6:36:08 PM
+error: undefined
+info: Base de datos conectada
+info: Escuchando en el puerto 8080
+info: GET en /products - 7/30/2024, 7:36:43 PM
+info: POST en /products - 7/30/2024, 7:36:45 PM
+info: GET en /carts/66a39d08ae0d846fefbf785a - 7/30/2024, 7:36:46 PM
+info: Base de datos conectada
+info: Escuchando en el puerto 8080
+info: POST en /api/sessions/login - 7/31/2024, 10:22:46 AM
+info: GET en /products - 7/31/2024, 10:22:46 AM
+info: POST en /products - 7/31/2024, 10:22:48 AM
+info: POST en /products - 7/31/2024, 10:22:52 AM
+info: GET en /carts/66a39d08ae0d846fefbf785a - 7/31/2024, 10:22:53 AM
+info: GET en /products - 7/31/2024, 10:22:55 AM
+info: GET en /api/sessions/logout - 7/31/2024, 10:23:00 AM
+info: GET en / - 7/31/2024, 10:23:00 AM
+info: POST en /api/sessions/login - 7/31/2024, 10:23:14 AM
+info: GET en /products - 7/31/2024, 10:23:14 AM
+info: POST en /products - 7/31/2024, 10:23:16 AM
+info: GET en /carts/6686ddbb0e2fbbef41dc8e28 - 7/31/2024, 10:23:16 AM
+info: DELETE en /api/carts/6686ddbb0e2fbbef41dc8e28/product/66a965b785b5fdf966d15718 - 7/31/2024, 10:23:19 AM
+info: GET en /carts/6686ddbb0e2fbbef41dc8e28 - 7/31/2024, 10:23:19 AM

@@ -34,7 +34,7 @@ class productManagerMongoose
     {
         try
         {
-            const result =  await productsModel.findByIdAndUpdate({_id: pid}, prodUpdate, {new: true})      
+            const result =  await productsModel.findByIdAndUpdate({_id: pid}, prodUpdate, {new: true})        // await productsModel.updateOne({_id: pid},prodUpdate)
             return result
         }catch (error)
         {
