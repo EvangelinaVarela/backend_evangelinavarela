@@ -1,0 +1,18 @@
+<main class="container">
+    <h1>Login</h1>
+    <form action="/api/sessions/login" method="POST" class="form-group w-50" >
+        <label>Email</label>
+        <input type="email" name="email" class="form-control">
+        <label>Password</label>
+        <input type="password" name="password" class="form-control">
+        <button class="btn btn-outline-dark w-100 mt-3">Ingresar</button>
+        <a href="/register" class="btn btn-outline-dark w-100 mt-3">
+            Registrarse
+        </a>
+        <div>
+            <a class="btn btn-dark mt-2" href="/api/sessions/github">Ingresar con Github</a>
+            <a class="btn btn-dark mt-2" href="/forgotPassword">Olvide mi contaseña</a>
+        </div>
+    </form>
+   
+</main>
