@@ -1,0 +1,129 @@
+<main>
+    <div style="position: relative; height: 50px; ">
+        {{!-- {{#if role}}
+            <a href="/realtimeproducts" style="position: absolute;" class="btn btn-outline-dark">
+                Admin. Productos
+            </a>
+        {{/if}} --}}
+        {{!-- <h5 style="position: absolute;">Usuario: {{nombre}}</h5> --}}
+        <a href="/api/sessions/logout" style="position: absolute;  right: 0; margin-top: 10px;" class="btn btn-outline-dark">
+            Logout
+        </a>
+    </div>
+      <div class="container h-100" >
+        <div class="row h-100">
+            <div class="col-md-4 my-auto">
+                <h1 class="h3 mb-5">Agregar Producto</h1>
+                <form id="noteForm" class="card card-body rounded-0" action="/api/products" method="POST">
+                    <input id="title" type="text"  name="title" placeholder="Escribe tu titulo" class="form-control rounded-0 mb-3" />
+                    <input id="description" type="text"  name="description" placeholder="Descripcion" class="form-control rounded-0 mb-3" />
+                    <input id="price" type="text"  name="price" placeholder="Precio" class="form-control rounded-0 mb-3" />
+                    <input id="code" type="text"  name="code" placeholder="Code" class="form-control rounded-0 mb-3" />
+                    <input id="stock" type="number"  name="stock" placeholder="Stock" class="form-control rounded-0 mb-3" />
+                    <input id="category" type="text"  name="category" placeholder="Categoria" class="form-control rounded-0 mb-3" />
+                    <button id="btnGuardar"  class="btn btn-dark rounded-0">Guardar</button>
+                </form>
+            </div>
+             <div class="col-md-8 py-3" id="productos">
+                <h1 class="h3 mb-5">Lista de Productos</h1>
+                <ul id="messageLog"></ul>
+            </div>
+        </div>
+           <div class="row">
+            <div class="col-md-4 my-auto">
+                <form id="noteForm" class="card card-body rounded-0">
+                    <h1 class="h3 mb-5">Eliminar Producto</h1>
+                        <input id="id" type="text"  name="id" placeholder="Ingrese ID a eliminar" class="form-control rounded-0 mb-3" />
+                        <button id="btnElminar" onclick="eliminarProducto()" class="btn btn-dark rounded-0">Eliminar</button>
+                    </form>
+                </form>
+            </div>
+        </div>
+       
+    </div>
+</main>
+<script src="/socket.io/socket.io.js"></script>
+
+<script>
+  const socket = io()
+
+   socket.on('cargarProductos', data => {
+        let log = document.getElementById('messageLog')
+        let messages = ''
+        
+        data.forEach(message => {
+            messages += `<li> ID: ${message._id}-  ${message.title} -  ${message.description} </li><br>`
+        })
+        log.innerHTML = messages
+   })
+
+  const txtTitle = document.querySelector("#title");
+  const txtDescripcion = document.querySelector("#descripcion");
+  const txtPrecio = document.querySelector("#precio");
+  const txtCode = document.querySelector("#code");
+
+  //Agregar Producto  
+  let btnAceptar = document.querySelector('#btnGuardar')
+  btnAceptar.addEventListener('click', evt => {
+         console.log ('entro en agregaar')
+         socket.emit('agregarProducto', {
+                    "title": txtTitle.value,
+                    "description": txtDescripcion.value,
+                    "price": txtPrecio.value,
+                    "thumbnail": "Sin imagen",
+                    "code": txtCode.value,
+                    "stock": 25,
+                    "status": 0,
+                    "category": "Categoria 2" })
+        
+  })
+
+   //Eliminar Producto  
+/*   let btnEliminar = document.querySelector('#btnElminar')
+   const txtId = document.querySelector("#id");
+   console.log ('txtID: ',txtId.value)
+   btnEliminar.addEventListener('click', evt => {
+         console.log ('entro en eliminar')
+         socket.emit('eliminarProducto', {
+                    "id": txtId.value })
+        
+  })*/
+ 
+  function eliminarProduct() {
+        console.log('Entra a eliminar prod');
+        
+        const txtId = document.getElementById('id').value;
+        console.log('Eliminar Producto txtID: ', txtId);
+
+        fetch(`/api/products/${txtId}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(res => {
+            if (!res.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return res.json();
+        })
+        .then(data => {
+            console.log('Respuesta', data);
+            Swal.fire({
+                icon: 'info',
+                title: 'Información',
+                text: data.message,
+            });
+
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Ocurrió un problema al eliminar el producto.',
+            });
+        });
+    }
+  
+</script>
