@@ -1,0 +1,28 @@
+<main>
+    <div style="position: relative;"></div>
+        <a href= "/products" style="display: inline-block;margin-top: 10px;" class="btn btn-outline-dark">
+            Volver 
+        </a>
+        <a href="/api/sessions/logout"  style="position: absolute;  right: 0;margin-top: 10px; " class="btn  btn-outline-dark">
+            Logout
+        </a> 
+    </div>
+ </div>
+        <div class="container h-100">
+          <h2>Mi Ticket</h2>
+             <div class="row h-100">
+                  <div class="col-md-6 my-auto ">
+                     <div class="card bg-light mb-3">
+                      <p><strong>Fecha de la compra:</strong> {{ticket.purchase_datetime}}</p>
+                      <p><strong>Total de compra:</strong> {{ticket.amount}}</p>
+                      <p><strong>Código del ticket:</strong> {{ticket.code}}</p>
+                  </div>
+              </div>
+          </div>
+  </div>
+  
+</main>
+<script>
+     
+   
+</script>

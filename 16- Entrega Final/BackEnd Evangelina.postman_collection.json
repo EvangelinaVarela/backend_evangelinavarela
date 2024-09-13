@@ -1,0 +1,417 @@
+{
+	"info": {
+		"_postman_id": "6e188178-48b4-4711-8741-5652e8af3c9c",
+		"name": "BackEnd Evangelina",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8636192"
+	},
+	"item": [
+		{
+			"name": "Nuevo Prducto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"title\": \"producto 15\",\r\n      \"description\": \"Descripcion producto 15\",\r\n      \"price\": 100,\r\n      \"thumbnail\": \"Sin imagen\",\r\n      \"code\": \"abc123-151\",\r\n      \"stock\": 25,\r\n      \"status\": true,\r\n      \"category\": \"Categoria 2\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products?limit=10&nropage=1&sort=1&status=true&category=Categoria 3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "nropage",
+							"value": "1"
+						},
+						{
+							"key": "sort",
+							"value": "1"
+						},
+						{
+							"key": "status",
+							"value": "true"
+						},
+						{
+							"key": "category",
+							"value": "Categoria 3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/products/pid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products/663e2b4495e9f588305b7bb7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"663e2b4495e9f588305b7bb7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar Producto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"title\": \"producto 10\",\r\n      \"description\": \"Descripcion producto 1\",\r\n      \"price\": 10,\r\n      \"thumbnail\": \"Sin imagen\",\r\n      \"code\": \"abc123-121\",\r\n      \"stock\": 25,\r\n      \"status\": 0,\r\n      \"category\": \"Categoria 2\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/products/663cd5b999a09440aff727a1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"663cd5b999a09440aff727a1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Producto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/products/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostCarrito",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/carts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"carts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCarrito",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/carts/663e1bdc35f7d8dfb7c961d6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"carts",
+						"663e1bdc35f7d8dfb7c961d6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Carrito",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\"quantity\": 10}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/carts/663e1bdc35f7d8dfb7c961d6/product/663e2b1a51df91f22de30e86",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"carts",
+						"663e1bdc35f7d8dfb7c961d6",
+						"product",
+						"663e2b1a51df91f22de30e86"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Prod de Carrito",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/carts/663e1bdc35f7d8dfb7c961d6/product/663d0aa6ec627f8234508710",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"carts",
+						"663e1bdc35f7d8dfb7c961d6",
+						"product",
+						"663d0aa6ec627f8234508710"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Vaciar  Carrito",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/carts/6679f5c45dd61b3e95e86cc0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"carts",
+						"6679f5c45dd61b3e95e86cc0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutMuchosProductos",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    \r\n    [{\r\n      \"product\": \"663e2b5195e9f588305b7bbb\",\r\n      \"quantity\": 5      \r\n    },\r\n\r\n     {\r\n      \"product\": \"663e2b5a95e9f588305b7bbd\",\r\n      \"quantity\": 35      \r\n    }]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/carts/663e1bdc35f7d8dfb7c961d6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"carts",
+						"663e1bdc35f7d8dfb7c961d6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutCantidadProduct",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\"quantity\": 80}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/carts/663e1bdc35f7d8dfb7c961d6/663e2b5195e9f588305b7bbb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"carts",
+						"663e1bdc35f7d8dfb7c961d6",
+						"663e2b5195e9f588305b7bbb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "purchase",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/carts/6686dc042b28a1636f6b0d84/purchase",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"carts",
+						"6686dc042b28a1636f6b0d84",
+						"purchase"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChangeUserRole",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/users/premium/66a39d08ae0d846fefbf785c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"premium",
+						"66a39d08ae0d846fefbf785c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUsers - Inactivos",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteUser",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/users/6686dc042b28a1636f6b0d86",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"6686dc042b28a1636f6b0d86"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
